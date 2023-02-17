@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mau Mobil</title>
+  <link rel="icon" href="../img/logo.png">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/lightSlider.css">
+
+  <!-- Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300&family=Montserrat:wght@300&family=Poppins&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+
+  <!-- Script -->
+  <script type="text/javascript" src="../js/jquery.js"></script>
+  <script type="text/javascript" src="../js/lightslider.js"></script>
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+
+</head>
+<body class="bg-slate-100">
+
+  <!-- Start : Header -->
+  <header class="bg-transparent absolute top-0 left-0 w-full flex items-center z-10">
+    <div class="container m-auto">
+      <div class="flex items-center relative py-2">
+        <div class="px-4">
+          <img src="../img/logo.png" alt="" class="w-[50px] h-[30px] lg:w-[70px] lg:h-[50px]">
+        </div>
+        <div class="flex items-center px-4 w-full">
+          <!-- Start: Hamburger menu -->
+          <button id="hamburger" name="hamburger" type="button" class="block absolute lg:hidden right-3 z-11">
+            <span class="hamburger-line transition duration-300 ease-in-out origin-top-left"></span>
+            <span class="hamburger-line transition duration-300 ease-in-out"></span>
+            <span class="hamburger-line transition duration-300 ease-in-out origin-bottom-left"></span>
+          </button>
+          <!-- End: Hamburger Menu -->
+  
+          <!-- Start: Navbar Menu -->
+          <nav id="nav-menu" class="hidden absolute py-5 bg-white shadow-lg rounded-lg max-w-[250px] w-full top-12 right-3 z-10 lg:flex lg:items-center lg:justify-between lg:static lg:bg-transparent lg:max-w-full lg:shadow-none lg:rounded-none">
+            <ul class="block lg:flex lg:py-2">
+              <li class="group py-3 lg:py-0">
+                <a href="index.html" class="nav-item text-darkBlue">Home</a>
+              </li>
+              <li class="group py-3 lg:py-0">
+                <a href="#galery" class="nav-item text-black">Gallery</a>
+              </li>
+              <li class="group py-3 lg:py-0">
+                <a href="#service" class="nav-item text-black">Service</a>
+              </li>
+              <li class="group py-3 lg:py-0">
+                <a href="#contact" class="nav-item text-black">Contact</a>
+              </li>
+              <li class="group py-3 lg:py-0">
+                <button class="bg-darkBlue text-white active:opacity-80 text-center block lg:hidden font-poppins text-sm mx-2 px-2 py-2 rounded-lg ease-linear transition-all duration-150" type="button" onclick="toggleModal('modal-id')">
+                  Download Sekarang
+                </button>
+              </li>
+            </ul>
+            <div class="hidden lg:block">
+              <button class="bg-darkBlue text-white active:opacity-80 font-poppins text-sm px-6 py-2 rounded-lg ease-linear transition-all duration-150" type="button" onclick="toggleModal('modal-id')">
+                Download Sekarang
+              </button>
+            </div>
+          </nav>
+          <!-- End: Navbar Menu -->
+        </div>
+      </div>
+    </div>
+  </header>
+  <!-- End : Header -->
+
+  <!-- Start: Modal section -->
+  <div class="hidden overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none justify-center items-center" id="modal-id">
+    <div class="relative w-[300px] lg:w-[800px] my-6 mx-auto">
+      <!-- Start: Content modal-->
+      <div class="border-0 rounded-lg shadow-lg relative flex flex-col w-full bg-white outline-none focus:outline-none">
+        <!--Start: Header modal-->
+        <div class="flex items-start justify-between p-2 lg:p-5 border-b border-solid border-slate-200 rounded-t">
+          <h3 class="text-lg lg:text-3xl font-semibold">
+            Coming Soon
+          </h3>
+          <button class="p-1 ml-auto bg-transparent border-0 text-black float-right text-xl lg:text-3xl leading-none font-semibold outline-none focus:outline-none" onclick="toggleModal('modal-id')">
+            <span class="text-black h-6 w-6 text-xl lg:text-3xl block outline-none focus:outline-none">
+              &times;
+            </span>
+          </button>
+        </div>
+        <!-- End: Header modal-->
+
+        <!-- Start: Body Modal-->
+        <div class="relative p-2 lg:p-6 flex-auto">
+          <p class="my-4 text-slate-500 text-sm lg:text-lg leading-relaxed">
+            Aplikasi sedang tahap pengembangan maaf atas ketidak nyamanannya
+          </p>
+        </div>
+        <!-- End: Body Modal-->
+      </div>
+      <!-- End: Content modal-->
+    </div>
+  </div>
+  <div class="hidden opacity-25 fixed inset-0 z-40 bg-black" id="modal-id-backdrop"></div>
+  <!-- End: Modal section -->
+
+  <!-- Start: Hero section -->
+  <section class="mt-10 lg:mt-24">
+    <div class="container m-auto p-2 lg:p-0">
+      <div class="swiper mySwiper rounded-lg">
+        <div class="swiper-wrapper">
+          <!-- Start : Carousel item 1 -->
+          <div class="swiper-slide border">
+            <img src="../img/banner-1.png" alt="" class="w-full h-[200px] lg:h-[550px]">
+          </div>
+          <!-- Start : Carousel item 1 -->
+  
+          <!-- Start : Carousel item 1 -->
+          <div class="swiper-slide border">
+            <img src="../img/banner-2.png" alt="" class="w-full h-[200px] lg:h-[550px]">
+          </div>
+          <!-- Start : Carousel item 1 -->
+  
+          <!-- Start : Carousel item 1 -->
+          <div class="swiper-slide border">
+            <img src="../img/banner-3.png" alt="" class="w-full h-[200px] lg:h-[550px]">
+          </div>
+          <!-- Start : Carousel item 1 -->
+        </div>
+        <div class="swiper-pagination"></div>
+      </div>
+    </div>
+  </section>
+  <!-- End: Hero section -->
+
+  <!-- Start: Main section  -->
+  <section id="main" class="py-10">
+    <div class="container m-auto">
+      <div class="mb-5">
+        <h4 class="text-sm lg:text-3xl text-center font-poppins font-semibold mb-4">Nikmati dan Tingkatkan Pengalaman Berkendara</h4>
+        <p class="text-[10px] lg:text-lg text-center font-medium font-poppins">Tingkatkan perjalanan Anda dan tingkatkan pengalaman berkendara <br> Anda dengan penawaran waktu terbatas kami <br> pada model mobil tertentu</p>
+      </div>
+      <div class="mt-5 p-1">
+        <h4 class="font-poppins font-semibold text-center lg:text-left text-[10px] lg:text-lg mb-2 capitalize">salah satu mobil yang kami sediakan</h4>
+        <!-- Start: Card -->
+        <div class="card">
+          <div class="flex-wrap flex items-center justify-between lg:justify-between">
+            <!-- Start: card body 1 -->
+            <div class="card-body p-2">
+              <img src="../img/merk-1.png" alt="">
+            </div>
+            <!-- End: card body 1 -->
+
+            <!-- Start: card body 2 -->
+            <div class="card-body p-2">
+              <img src="../img/merk-2.png" alt="">
+            </div>
+            <!-- End: card body 2 -->
+
+            <!-- Start: card body 3 -->
+            <div class="card-body p-2">
+              <img src="../img/merk-3.png" alt="">
+            </div>
+            <!-- End: card body 3 -->
+
+            <!-- Start: card body 4 -->
+            <div class="card-body p-2">
+              <img src="../img/merk-4.png" alt="">
+            </div>
+            <!-- End: card body 4 -->
+
+            <!-- Start: card body 5 -->
+            <div class="card-body p-2">
+              <img src="../img/merk-5.png" alt="">
+            </div>
+            <!-- End: card body 5 -->
+
+            <!-- Start: card body 6 -->
+            <div class="card-body p-2">
+              <img src="../img/merk-6.png" alt="">
+            </div>
+            <!-- End: card body 6 -->
+
+            <!-- Start: card body 7 -->
+            <div class="card-body p-2">
+              <img src="../img/merk-7.png" alt="">
+            </div>
+            <!-- End: card body 7 -->
+
+            <!-- Start: card body 8 -->
+            <div class="card-body p-2">
+              <img src="../img/merk-8.png" alt="">
+            </div>
+            <!-- End: card body 8 -->
+
+            <!-- Start: card body 9 -->
+            <div class="card-body p-2">
+              <img src="../img/merk-9.png" alt="">
+            </div>
+            <!-- End: card body 9 -->
+
+            <!-- Start: card body 10 -->
+            <div class="card-body p-2">
+              <img src="../img/merk-10.png" alt="">
+            </div>
+            <!-- End: card body 10 -->
+
+            <!-- Start: card body 11 -->
+            <div class="card-body p-2">
+              <img src="../img/merk-11.png" alt="">
+            </div>
+            <!-- End: card body 11 -->
+
+            <!-- Start: card body 12 -->
+            <div class="card-body p-2">
+              <img src="../img/merk-12.png" alt="">
+            </div>
+            <!-- End: card body 12 -->
+
+            <!-- Start: card body 13 -->
+            <div class="card-body p-2">
+              <img src="../img/merk-13.png" alt="">
+            </div>
+            <!-- End: card body 13 -->
+
+            <!-- Start: card body 14 -->
+            <div class="card-body p-2">
+              <img src="../img/merk-14.png" alt="">
+            </div>
+            <!-- End: card body 14 -->
+
+            <!-- Start: card body 17 -->
+            <div class="card-body p-2">
+              <img src="../img/merk-17.png" alt="">
+            </div>
+            <!-- End: card body 17 -->
+
+          </div>
+          <!-- End: Card -->
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End: Main section -->
+
+  <!-- Start: Service section  -->
+  <section id="service" class="py-10">
+    <div class="container mx-auto">
+      <h4 class="font-poppins font-semibold text-center lg:text-left text-sm lg:text-3xl mb-2">Services MauMobil</h4>
+      <p class="font-poppins text-center lg:text-left text-[10px] lg:text-lg">Nikmati layanan dari MauMobil dengan berbagai fitur yang telah disediakan</p>
+      <!-- Start: Service body -->
+      <div class="mt-2 p-2">
+        <div class="grid grid-cols-12 gap-4">
+          <!-- Start: card body 1 -->
+          <div class="col-span-6 lg:col-span-4">
+            <div class="relative">
+              <img src="../img/bg-1.png" alt="" class="w-full">
+              <div class="absolute flex flex-col items-center top-0 p-2 lg:p-6">
+                <img src="../img/icon-1.png" alt="" class="w-4 lg:w-auto">
+                <h4 class="font-poppins font-semibold text-sm lg:text-2xl text-white mt-2">Chat Agen</h4>
+                <p class="font-poppins text-[10px] lg:text-xl text-slate-200 text-center">Hubungi kami langsung jika kamu mau saran kami dalam memilih mobil</p>
+              </div>
+            </div>
+          </div>
+          <!-- End: card body 1 -->
+
+          <!-- Start: card body 2 -->
+          <div class="col-span-6 lg:col-span-4">
+            <div class="relative">
+              <img src="../img/bg-2.png" alt="" class="w-full">
+              <div class="absolute flex flex-col items-center top-0 p-2 lg:p-6">
+                <img src="../img/icon-2.png" alt="" class="w-8 lg:w-auto">
+                <h4 class="font-poppins font-semibold text-sm lg:text-2xl text-white mt-2">Pilih Mobil</h4>
+                <p class="font-poppins text-[10px] lg:text-xl text-slate-200 text-center">Nikmati berbagai merek mobil yang disediakan oleh MauMobil</p>
+              </div>
+            </div>
+          </div>
+          <!-- End: card body 2 -->
+
+          <!-- Start: card body 3 -->
+          <div class="col-span-6 lg:col-span-4">
+            <div class="relative">
+              <img src="../img/bg-3.png" alt="" class="w-full">
+              <div class="absolute flex flex-col items-center top-0 p-2 lg:p-6">
+                <img src="../img/icon-3.png" alt="" class="w-8 lg:w-auto">
+                <h4 class="font-poppins font-semibold text-sm lg:text-2xl text-white mt-2">Test Drive</h4>
+                <p class="font-poppins text-[10px] lg:text-xl text-slate-200 text-center">Pilih mobil kesukaan Anda dan kenali mobil Anda dengan melakukan test drive di MauMobil</p>
+              </div>
+            </div>
+          </div>
+          <!-- End: card body 3 -->
+
+          <!-- Start: card body 4 -->
+          <div class="col-span-6 lg:col-span-4">
+            <div class="relative">
+              <img src="../img/bg-1.png" alt="" class="w-full">
+              <div class="absolute flex flex-col items-center top-0 p-2 lg:p-6">
+                <img src="../img/icon-4.png" alt="" class="w-8 lg:w-auto">
+                <h4 class="font-poppins font-semibold text-sm lg:text-2xl text-white mt-2">Services Booking</h4>
+                <p class="font-poppins text-[10px] lg:text-xl text-slate-200 text-center">Kamu dapat membooking service mobil tanpa perlu antri</p>
+              </div>
+            </div>
+          </div>
+          <!-- End: card body 4 -->
+
+          <!-- Start: card body 5 -->
+          <div class="col-span-6 lg:col-span-4">
+            <div class="relative">
+              <img src="../img/bg-2.png" alt="" class="w-full">
+              <div class="absolute flex flex-col items-center top-0 p-2 lg:p-6">
+                <img src="../img/icon-5.png" alt="" class="w-8 lg:w-auto">
+                <h4 class="font-poppins font-semibold text-sm lg:text-2xl text-white mt-2">DP Mobil</h4>
+                <p class="font-poppins text-[10px] lg:text-xl text-slate-200 text-center">Pilih mobil yang anda suka dengan berbagai harga yang telah disediakan</p>
+              </div>
+            </div>
+          </div>
+          <!-- End: card body 5 -->
+
+          <!-- Start: card body 6 -->
+          <div class="col-span-6 lg:col-span-4">
+            <div class="relative">
+              <img src="../img/bg-3.png" alt="" class="w-full">
+              <div class="absolute flex flex-col items-center top-0 p-2 lg:p-6">
+                <img src="../img/icon-6.png" alt="" class="w-8 lg:w-auto">
+                <h4 class="font-poppins font-semibold text-sm lg:text-2xl text-white mt-2">Promo Mobil</h4>
+                <p class="font-poppins text-[10px] lg:text-xl text-slate-200 text-center">Jangan sampai tertinggal promo kami, karena akan ada promo besar-besaran</p>
+              </div>
+            </div>
+          </div>
+          <!-- End: card body 6 -->
+        </div>
+        <!-- End: Card -->
+      </div>
+    </div>
+  </section>
+  <!-- End: Service section -->
+
+  <!-- Start: Contact us section -->
+  <section class="py-10">
+    <div class="w-[300px] lg:w-[999px] m-auto">
+      <div class="shadow-lg p-6">
+        <h4 class="font-poppins text-base lg:text-xl font-semibold">Ngobrol dengan kami</h4>
+        <p class="font-poppins text-[10px] text-sm mb-4">klik tombol whatsapp dibawah jika ingin mengetahui info lebih lanjut</p>
+        <div class="bg-green-600 hover:opacity-90 w-[200px] lg:w-[500px] h-[35px] lg:h-[45px] rounded-lg m-auto p-2">
+          <a href="https://wa.link/q3ij3u" target="_blank" class="text-white font-poppins rounded-md block text-center text-sm lg:text-xl"><i class="fa-brands fa-whatsapp"></i> Hubungi Kami</a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End: Contact us section -->
+
+  <!-- Start: Banner Section -->
+  <section id="banner" class="py-10">
+    <div class="container m-auto">
+      <div class="flex flex-wrap items-center gap-1">
+        <div class="w-full lg:w-[40%]">
+          <img src="../img/avatar.png" alt="" class="h-[200px] lg:h-[450px] m-auto">
+        </div>
+        <div class="w-full lg:w-[50%] p-2 lg:p-0">
+          <div class="ml-0 lg:ml-10">
+            <h4 class="text-darkPurple font-poppins font-semibold text-xs lg:text-2xl">Yuk Cari mobil kamu sekarang!</h4>
+            <div class="lg:w-[70%]">
+              <p class="font-medium font-poppins text-[10px] lg:text-lg">
+                Cari mobil impian yang ingin kamu cari, dengan bersama #MauMobil anda akan mendapatkan harga impian juga
+              </p>
+            </div>
+            <div class="mt-1 lg:w-[70%]">
+              <form action="" class="shadow-lg">
+                <div class="relative">
+                  <div class="absolute inset-y-0 left-0 flex items-center pl-2 pointer-events-none">
+                    <svg aria-hidden="true" class="w-5 h-5 text-gray-500 dark:text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
+                  </div>
+                  <input type="search" id="default-search" class="block w-full p-2 pl-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-white outline-none focus:ring-slate-300 focus:border-slate-300" placeholder="Cari Mobil" required>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End: Banner Section -->
+
+  <!-- Start: Gallery section  -->
+  <section id="galery" class="py-10">
+    <div class="container m-auto mb-2">
+      <h4 class="font-poppins font-semibold text-center lg:text-left text-sm lg:text-3xl mb-2">Gallery MauMobil</h4>
+      <p class="font-poppins text-center lg:text-left text-[10px] lg:text-lg">Nikmati layanan dari MauMobil dengan berbagai
+    </div>
+    <ul id="autoWidth" class="cs-hidden">
+      <li class="item-a">
+        <div class="box">
+          <div class="slider">
+            <img src="../img/galleri-1.png" alt="">
+            <div class="absolute top-5 lg:top-16 max-w-[200px] lg:max-w-[500px] left-4 lg:left-10 p-2 lg:p-6">
+              <h4 class="font-poppins text-white font-semibold text-[10px] lg:text-2xl mb-2">Berbagi Kebahagiaan Bersama!!</h4>
+              <p class="text-white font-medium font-poppins text-[8px] lg:text-base w-[150px] lg:w-full">
+                Mudahkan Segala urusan kamu untuk memilih mobil dengan kami #MauMobil Siap membantu.
+              </p>
+            </div>
+          </div>
+        </div>
+      </li>
+
+      <li class="item-b">
+        <div class="box">
+          <div class="slider">
+            <img src="../img/galleri-2.png" alt="">
+            <div class="absolute top-2 lg:top-16 max-w-[200px] lg:max-w-[500px] right-2 lg:right-10 p-2 lg:p-6">
+              <h4 class="font-poppins text-white text-right font-semibold text-[10px] lg:text-2xl mb-2">Nikmati Kegiatan Anda  dengan Berbagai Aktifitas yang Menyenangkan  </h4>
+              <p class="text-white font-medium text-right font-poppins text-[8px] lg:text-base ">
+                Ayo nikmati berbagi fitur yang kami sediakan dan pemilih mobil kesukaan  kamu di #MauMobil.
+              </p>
+            </div> 
+          </div>
+        </div>
+      </li>
+
+      <li class="item-c">
+        <div class="box">
+          <div class="slider">
+            <img src="../img/galleri-3.png" alt="">
+              <div class="absolute top-2 lg:top-16 max-w-[200px] lg:max-w-[500px] left-4 lg:left-10 p-2 lg:p-6">
+                <h4 class="font-poppins text-white font-semibold text-[10px] lg:text-2xl mb-2">Nikmati Kegiatan Anda  dengan Berbagai Aktifitas yang Menyenangkan  </h4>
+                <p class="text-white font-medium font-poppins text-[8px] lg:text-base w-[150px] lg:w-full">
+                  Ayo nikmati berbagi fitur yang kami sediakan dan pemilih mobil kesukaan  kamu di #MauMobil.
+                </p>
+              </div> 
+            </div>
+          </div>
+        </div>
+      </li>
+    </ul>
+  </section>
+  <!-- End: Gallery section -->
+
+
+  <!-- Start: Find Us section -->
+  <section id="contact" class="mt-10 mb-10">
+    <div class="container m-auto">
+      <div class="flex flex-wrap items-center">
+        <div class="w-full lg:w-[35%] px-2 mb-4">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15928.279274851939!2d98.6702814!3d3.5714144!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3031302fe490fe11%3A0x3372cac556f288ca!2sIndigoSpace%20Medan!5e0!3m2!1sid!2sid!4v1676432606107!5m2!1sid!2sid" height="250px" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="w-full"></iframe>
+        </div>
+        <!-- Start: Find us -->
+        <div class="w-full lg:w-[60%] ml-10">
+          <h4 class="font-poppins font-semibold text-sm lg:text-xl text-center lg:text-left mb-4">Contact Us</h4>
+          <div class="grid grid-cols-6 gap-4">
+            <!-- Start: Find us item 1 -->
+              <div class="col-span-6 lg:col-span-2 mb-2">
+                <p class="font-poppins text-sm lg:text-base font-semibold text-center lg:text-left">Alamat MauMobil :</p>
+                <p class="font-poppins text-xs lg:text-sm font-medium text-center lg:text-left">Jl. Mongonsidi No.6,Anggrung, Medan Polonia</p>
+              </div>
+            <!-- End: Find us item 1 -->
+
+            <!-- Start: Find us item 1 -->
+            <div class="col-span-6 lg:col-span-2 mb-2">
+              <p class="font-poppins text-sm lg:text-base font-semibold text-center lg:text-left">Email :</p>
+              <p class="font-poppins text-xs lg:text-sm font-medium text-center lg:text-left">maumobil1@gmail.com</p>
+            </div>
+            <!-- End: Find us item 1 -->
+
+            <!-- Start: Find us item 1 -->
+            <div class="col-span-6 lg:col-span-2 mb-2">
+              <p class="font-poppins text-sm lg:text-base font-semibold text-center lg:text-left">Phone Number :</p>
+              <p class="font-poppins text-xs lg:text-sm font-medium text-center lg:text-left">+628766788994565</p>
+            </div>
+            <!-- End: Find us item 1 -->
+          </div>
+        </div>
+        <!-- End: Find us -->
+      </div>
+    </div>
+  </section>
+  <!-- End: Contact section -->
+
+  <!-- Start: Footer section -->
+  <section class="py-10 bg-white">
+    <div class="container m-auto">
+      <h4 class="text-center font-normal text-sm lg:text-base font-poppins">&copy; 2023 MauMobil. All Rights Reserved</h4>
+    </div>
+  </section>
+  <!-- End: Footer section -->
+
+  <script type="text/javascript" src="../js/index.js"></script>
+  <script type="text/javascript" src="../js/modal.js"></script>
+
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
+  <!-- Initialize Swiper -->
+  <script>
+    var swiper = new Swiper(".mySwiper", {
+      spaceBetween: 30,
+      centeredSlides: true,
+      autoplay: {
+        delay: 2500,
+        disableOnInteraction: false,
+      },
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+    });
+  </script>
+</body>
+</html>
